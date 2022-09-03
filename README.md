@@ -1,2 +1,2 @@
 # babylon-hud-template
-babylon Head-up-Display template
+Babylonjs Head-up-Display template
