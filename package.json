@@ -1,0 +1,45 @@
+{
+  "name": "babylon-hud-template",
+  "version": "0.0.1",
+  "description": "Babylonjs Head-up-Display template",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "cprox -p 8080 -t *=STATIC:${PWD}/dist/html",
+    "tsc": "tsc -p tsconfig.json; echo 'COMPILED!'",
+    "tsnode": "ts-node src/index.ts",
+    "build": "npm run html & npm run tsc; npm run bundle; npm run tick; echo 'BUILD!'",
+    "bundle": "browserify --fast --noparse=FILE tmp/js/index.js > dist/bundle.js; cp dist/bundle.js  dist/html/bundle.js; echo 'BUNDLED!'",
+    "html": "mkdir -p tmp/js; mkdir -p dist/html; rm -rf dist/html/*; cp dist/last.tick dist/html/last.tick; cp -r src/html/* dist/html/; cp dist/bundle.js dist/html/bundle.js; echo 'HTML READY!'",
+    "tick": "echo \"$(date)\" > dist/last.tick; cp dist/last.tick dist/html/last.tick",
+    "tick:wait": "echo \"wait\" > dist/last.tick; cp dist/last.tick dist/html/last.tick",
+    "dev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build'",
+    "tsdev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run tsnode'",
+    "start-watch": "nodemon -w dist/ -x 'npm run start'",
+    "build-watch": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build'",
+    "win:dev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build & npm run start'",
+    "win:tsdev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run tsnode'",
+    "win:start-watch": "nodemon -w './dist/**/*' -x 'npm run start'",
+    "win:build-watch": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build'"
+  },
+  "author": "majo418",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/babylonjs": "^2.4.1",
+    "@types/colors": "^1.2.1",
+    "@types/http-proxy": "^1.17.8",
+    "@types/node": "^16.3.1",
+    "@types/serve-static": "^1.13.10",
+    "browserify": "^17.0.0",
+    "cprox": "^1.9.4",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.2.1",
+    "typescript": "^4"
+  },
+  "dependencies": {
+    "babylonjs": "^5.20.0",
+    "colors": "^1.4.0",
+    "http-proxy": "^1.18.1",
+    "serve-static": "^1.14.2",
+    "typenvy": "^1.2.2"
+  }
+}

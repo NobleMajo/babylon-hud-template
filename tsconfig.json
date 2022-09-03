@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "lib": [
+      "ES2020",
+      "ES5",
+      "ES6",
+      "DOM",
+    ],
+    "incremental": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": false,
+    "strict": true,
+    "outDir": "tmp/js",
+    "rootDir": "src/ts",
+    "noImplicitAny": true,
+  },
+  "include": [
+    "src/ts/**/*.ts",
+  ],
+  "exclude": [
+    "test",
+    "dist",
+    "src/html",
+    "node_modules"
+  ]
+}

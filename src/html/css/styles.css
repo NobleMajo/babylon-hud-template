@@ -1,0 +1,26 @@
+body {
+    display: block;
+    background-color: #000000;
+}
+
+.stretch {
+    height: 100%;
+    width: 100%;
+    max-height: none;
+    max-width: none;
+}
+
+.boaderless {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    max-width: none;
+    max-height: none;
+}
+
+.mainCanvas {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}

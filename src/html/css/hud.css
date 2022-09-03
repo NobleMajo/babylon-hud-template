@@ -1,0 +1,137 @@
+.mainHud {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hudHelper {
+    display: none;
+}
+
+.hudHelper div {
+    background-color: rgba(0, 0, 0, 0.333);
+    border-radius: 3rem;
+    padding: 2px 5px;
+}
+
+.a-tl {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    text-align: left;
+    vertical-align: top;
+}
+
+.a-tr {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    text-align: right;
+    vertical-align: top;
+}
+
+.a-tc {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+
+    text-align: center;
+    vertical-align: top;
+}
+
+.a-cl {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(0px, -50%);
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+.a-cc {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.a-cr {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0px, -50%);
+
+    text-align: right;
+    vertical-align: middle;
+}
+
+.a-bc {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.a-bl {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.a-br {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.unclickable {
+    pointer-events: none;
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+h3a-l {
+    text-align: left;
+}
+
+.sea-t {
+    vertical-align: top;
+}
+
+.sea-vc {
+    vertical-align: middle;
+}
+
+.sea-hc {
+    text-align: center;
+}
+
+.sea-r {
+    text-align: right;
+}
+
+.sea-b {
+    vertical-align: bottom;
+}
