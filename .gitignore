@@ -1,7 +1,9 @@
 
 node_modules
 dist
-tmp
 core
 certs
+
+# buildtime
 tsconfig.tsbuildinfo
+tmp
