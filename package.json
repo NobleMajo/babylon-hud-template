@@ -4,7 +4,7 @@
   "description": "Babylonjs Head-up-Display template",
   "main": "dist/index.js",
   "scripts": {
-    "start": "cprox -p 8080 -t *=STATIC:${PWD}/dist/html",
+    "serve": "cprox -p 4200 -t *=STATIC:${PWD}/dist/html",
     "tsc": "tsc -p tsconfig.json; echo 'COMPILED!'",
     "tsnode": "ts-node src/index.ts",
     "build": "npm run html & npm run tsc; npm run bundle; npm run tick; echo 'BUILD!'",
@@ -15,11 +15,7 @@
     "dev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build'",
     "tsdev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run tsnode'",
     "start-watch": "nodemon -w dist/ -x 'npm run start'",
-    "build-watch": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build'",
-    "win:dev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build & npm run start'",
-    "win:tsdev": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run tsnode'",
-    "win:start-watch": "nodemon -w './dist/**/*' -x 'npm run start'",
-    "win:build-watch": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build'"
+    "build-watch": "nodemon --ext ts,html,json,js,css -w src/ -x 'npm run build'"
   },
   "author": "majo418",
   "license": "MIT",
